@@ -1,0 +1,23 @@
+.form-user{
+    width: 40%;
+    height: 100vh;
+    
+    form{
+        background-color: var(--bg-card);
+        display: flex;
+        flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        border-radius: 1rem;
+        padding: 2rem;
+        label{
+            padding: 1rem;
+            color: rgb(255, 247, 247);
+        }
+        button{
+            padding: 0.6rem;
+            margin: 0.6rem;
+        }
+    }
+    
+
+}
