@@ -52,3 +52,49 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+@media only screen and (max-width: 750px){
+
+  .container{
+    nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      h1{
+        font-size: small;
+        margin-left: 2rem;
+      }
+      button{
+        font-size: 0.8rem;
+        background-color: var(--bg-card);
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        color: var(--white);
+        width: 12rem;
+        height: auto;
+        transition: width 0.3s, height 0.5s;
+        font-weight: 600;
+      }
+      button::before{
+        content: '+';
+        font-size: xx-large;
+        padding: 0.5rem;
+        color: var(--white);
+        vertical-align: middle;
+      }
+        button:hover{
+        background-color:var(--bg-card);
+        width: 13rem;
+        height: auto;
+      }
+      h1{
+        color: var(--white);
+      }
+    }
+    
+  }
+  .card-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
