@@ -34,7 +34,7 @@ function App() {
       <div className='card-container'>
         {
           users?.map(item =>(
-            <UserCard key={item.id} user={item} deleteUser={deleteUser} cardId={item.id} userEdit={userEdit} setuserEdit={setuserEdit} updateUser={updateUser} />
+            <UserCard key={item.id} formBool={formBool} setFormBool={setFormBool} user={item} deleteUser={deleteUser} cardId={item.id} userEdit={userEdit} setuserEdit={setuserEdit} updateUser={updateUser} />
           ))
         }
       </div>
