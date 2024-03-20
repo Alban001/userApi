@@ -55,7 +55,10 @@
 
 @media only screen and (max-width: 750px){
   #root{
-    max-width: 750px;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: red;
   }
   .container{
     nav{
