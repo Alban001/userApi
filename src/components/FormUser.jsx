@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import {useForm} from 'react-hook-form'
 import '../styles/formUer.css'
 
-const FormUser = ({userID,createUser , userEdit, setuserEdit, updateUser}) => {
+const FormUser = ({userID,createUser , userEdit, setuserEdit, updateUser, setFormBool,formBool}) => {
 
     const {handleSubmit, register, reset} = useForm()
 
@@ -14,6 +14,7 @@ const FormUser = ({userID,createUser , userEdit, setuserEdit, updateUser}) => {
     if(userEdit){
       updateUser('/users/',userEdit.id,data)
       setuserEdit()
+      setFormBool(!formBool)
     }else{
       createUser('users',data)
     }

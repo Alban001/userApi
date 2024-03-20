@@ -27,7 +27,7 @@ function App() {
         <button onClick={handleTouch}>Agregar nuevo usuario</button></nav>
         <div className='form-container'>
         {
-          formBool ? <FormUser userID={users.id} userEdit={userEdit} setuserEdit={setuserEdit} updateUser={updateUser} createUser={createUser}/> : ''
+          formBool ? <FormUser setFormBool={setFormBool} formBool={formBool} userID={users.id} userEdit={userEdit} setuserEdit={setuserEdit} updateUser={updateUser} createUser={createUser}/> : ''
         }
         </div>
         
