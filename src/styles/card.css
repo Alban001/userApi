@@ -61,14 +61,12 @@
         align-items: center;
         flex-direction: column;
         margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 3rem;
-        width: 10rem;
+        width: 8rem;
         height: 40%;
         border-radius: 0.3rem;
         box-shadow: rgba(241, 232, 232, 0.15) 1.95px 1.95px 2.6px;
         h2{
-            font-size: small;
+            font-size:x-small;
         }
         li{
             list-style: none;
@@ -85,7 +83,7 @@
         border-radius: 0.3rem;
     }
     .content-card{
-        width: 10rem;
+        width: 8rem;
         text-align: left;
         
         li{
@@ -98,7 +96,7 @@
         display: flex;
         justify-content: end;
         align-items: end;
-        width: 10rem;
+        width: 8em;
         margin-left: 1rem;
         border-radius: 1rem;
         margin-bottom: 1rem;
