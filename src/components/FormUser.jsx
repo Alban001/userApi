@@ -2,9 +2,13 @@ import React, {useEffect} from 'react'
 import {useForm} from 'react-hook-form'
 import '../styles/formUer.css'
 
-const FormUser = ({userID,createUser , userEdit, setuserEdit, updateUser, setFormBool,formBool}) => {
+const FormUser = ({createUser , userEdit, setuserEdit, updateUser, modal, setmodal}) => {
 
     const {handleSubmit, register, reset} = useForm()
+
+    const handleClick=()=>{
+      setmodal(!modal)
+    }
 
     useEffect(()=>{
       reset(userEdit)
@@ -14,10 +18,11 @@ const FormUser = ({userID,createUser , userEdit, setuserEdit, updateUser, setFor
     if(userEdit){
       updateUser('/users/',userEdit.id,data)
       setuserEdit()
-      setFormBool(!formBool)
+      setmodal(!modal)
+     
     }else{
       createUser('users',data)
-      setFormBool(!formBool)
+      setmodal(!modal)
     }
     reset({
       email:'',
@@ -29,8 +34,13 @@ const FormUser = ({userID,createUser , userEdit, setuserEdit, updateUser, setFor
   
 
   return (
-    <div className='form-user' >
+    <div className='form-modal'>
+        <div className='form-user' >
         <form onSubmit={handleSubmit(submit)}>
+          <div className='close-container'>
+          <button onClick={handleClick}>X</button>
+          </div>
+        
         <label >Email: </label>
         <input type="text" {...register('email')}/>
         <label >Passowrd: </label>
@@ -41,6 +51,7 @@ const FormUser = ({userID,createUser , userEdit, setuserEdit, updateUser, setFor
         <input type="text" {...register('last_name')}/>
         <button>Submit</button>
     </form>
+    </div>
     </div>
     
   )

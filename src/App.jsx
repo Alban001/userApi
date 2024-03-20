@@ -3,6 +3,7 @@ import './App.css'
 import useCrud from './hooks/useCrud'
 import FormUser from './components/FormUser'
 import UserCard from './components/UserCard'
+import { set } from 'react-hook-form'
 
 
 function App() {
@@ -11,30 +12,33 @@ function App() {
   const [users, getUsers, createUser, deleteUser, updateUser] = useCrud(BASEURL)
 
   const [userEdit, setuserEdit] = useState()
-  const [formBool, setFormBool] = useState(false)
+
+  const [modal, setmodal] = useState(false)
+
+  const handleBtnClick =()=>{
+      setmodal(!modal)
+  }
 
   useEffect(()=>{
     getUsers('users')
  
   },[])
- const handleTouch =()=>{
-     setFormBool(!formBool)
- }
+
   return (
     <div className='container'>
        <nav>
         <h1>Usuarios</h1>
-        <button onClick={handleTouch}>Agregar nuevo usuario</button></nav>
+        <button onClick={handleBtnClick}>Agregar nuevo usuario</button></nav>
         <div className='form-container'>
-        {
-          formBool ? <FormUser setFormBool={setFormBool} formBool={formBool} userID={users.id} userEdit={userEdit} setuserEdit={setuserEdit} updateUser={updateUser} createUser={createUser}/> : ''
-        }
+           {
+            modal ? <FormUser userEdit={userEdit} setuserEdit={setuserEdit} updateUser={updateUser} createUser={createUser}modal={modal} setmodal={setmodal}/> : ''
+           }
         </div>
         
       <div className='card-container'>
         {
           users?.map(item =>(
-            <UserCard key={item.id} formBool={formBool} setFormBool={setFormBool} user={item} deleteUser={deleteUser} cardId={item.id} userEdit={userEdit} setuserEdit={setuserEdit} updateUser={updateUser} />
+            <UserCard key={item.id} modal={modal} setmodal={setmodal} user={item} deleteUser={deleteUser} cardId={item.id} userEdit={userEdit} setuserEdit={setuserEdit} updateUser={updateUser} />
           ))
         }
       </div>

@@ -4,7 +4,7 @@ import { FaTrash } from "react-icons/fa";
 import { CiEdit } from "react-icons/ci";
 
 
-const UserCard = ({user, deleteUser , cardId, userEdit, setuserEdit,setFormBool,formBool}) => {
+const UserCard = ({user, deleteUser , cardId, setuserEdit,modal, setmodal}) => {
   
   const handleDelete=()=>{
     deleteUser('/users/',cardId)
@@ -12,7 +12,7 @@ const UserCard = ({user, deleteUser , cardId, userEdit, setuserEdit,setFormBool,
   }
   const handleEdit=()=>{
     setuserEdit(user)
-    setFormBool(!formBool)
+    setmodal(!modal)
   }
   return (
     <div className='card'>

@@ -6,13 +6,16 @@
   --black: rgb(76, 74, 74);
   --white: rgba(242, 233, 233, 0.99);
   --nude:#2d50c4;
-  --bg-card: rgb(12, 39, 67);
+  --bg-card: rgb(80, 76, 69);
 }
 .container{
   nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    h1{
+      color: black;
+    }
     button{
       font-size: 0.8rem;
       background-color: var(--bg-card);
@@ -36,9 +39,7 @@
       width: 13rem;
       height: auto;
     }
-    h1{
-      color: var(--white);
-    }
+   
   }
   
 }
@@ -94,7 +95,7 @@
         height: auto;
       }
       h1{
-        color: var(--white);
+        color: var(--black);
       }
     }
     
