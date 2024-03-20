@@ -80,7 +80,8 @@
     .title-card{
         background-color: #0b1929;
         width: 100%;
-        border-radius: 0.3rem;
+        border-radius: 0.1rem;
+        margin-top: 0.3rem;
     }
     .content-card{
         width: 8rem;
@@ -88,7 +89,10 @@
         
         li{
             color: rgb(237, 237, 244);
-            font-size: 9px;
+            font-size: 10px;
+            p{
+                font-size:14px;
+            }
         }
     }
     .button-card{
