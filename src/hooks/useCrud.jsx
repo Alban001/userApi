@@ -30,7 +30,7 @@ const useCrud = (BASEURL) => {
   const url= `${BASEURL}${path}${id}/`
   axios.delete(url)
   .then(res => {
-      setResponse(response.filter( filt => (filt !== id)))
+      setResponse(response.filter( filt => (filt.id !== id)))
   })
   .catch(err=> console.log(err))
 }
