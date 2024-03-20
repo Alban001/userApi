@@ -58,13 +58,14 @@
     max-width: 550px;
     margin: 0 auto;
     padding: 0;
-    background-color: red;
+    
   }
   .container{
     nav{
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      width: 100%;
       h1{
         font-size: small;
         margin-left: 2rem;
