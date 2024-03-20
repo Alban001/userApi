@@ -17,6 +17,7 @@ const FormUser = ({userID,createUser , userEdit, setuserEdit, updateUser, setFor
       setFormBool(!formBool)
     }else{
       createUser('users',data)
+      setFormBool(!formBool)
     }
     reset({
       email:'',
